@@ -1,0 +1,62 @@
+<!--
+<!doctype html>
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Minds status</title>
+    <style>
+html, body {
+margin:0;
+padding:10;
+width: 250px;
+}
+   #blue {
+    background-color: #337dff;
+}
+   #orange {
+    background-color: #ff5733;
+}
+   #dark {
+    background-color: #4a505b;
+}
+	button {
+    border: none;
+    color: white;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#footer {
+position: fixed;
+bottom: 0;
+}
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="injectedjs.js"></script>
+  </head>
+  <body>
+    <div id="status">
+<h2> Pick a theme: </h2>
+<a href="blue.html"><button type="button" id="blue" onclick="activeBlue(); run();">Blue</button></a>
+<a href="orange.html"><button type="button" id="orange" onclick="activeOrange(); run();">Orange</button></a> 
+<a href="dark.html"><button type="button" id="dark" onclick="activeDark(); run();">Dark</button></a>
+<br />
+<div id="footer">
+<font size="1"> <a href="mailto:one.snapp8@gmail.com?Subject=Minds%20Support" target="_top">Contact us</a></font>
+</div>
+</div>
+</body>
+</html>

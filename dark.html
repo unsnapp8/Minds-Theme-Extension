@@ -1,0 +1,47 @@
+<!--
+<!doctype html>
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Minds status</title>
+    <style>
+html, body {
+margin:0;
+padding:25;
+background-color: #4a505b;
+color: white;
+}
+#footer {
+position: fixed;
+bottom: 0;
+}
+a { 
+color:white;
+}
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="injectedjs.js"></script>
+  </head>
+  <body>
+    <div id="status">
+<br /> <br /> <br />
+<center> 
+<h1> Dark </h1> 
+<a href="popup.html" size="1" onclick="reset()"> Reset </a>
+</center>
+<br />
+<div id="footer">
+<font size="1"> <a href="mailto:one.snapp8@gmail.com?Subject=Minds%20Support" target="_top">Contact us</a></font>
+</div>
+</div>
+</body>
+</html>
